@@ -8,12 +8,26 @@ use Illuminate\Database\Eloquent\Model;
 class CalculoDeCombustivel extends Model
 {
     use HasFactory;
-
     public function calcular() {
+        switch($_GET['combustivel']){
+            case "Gasolina":
+                $valorGasolina = 4.99;
+                break;
+            case "Etanol":
+                $valorGasolina = 3.99;
+                break;
+            case "Diesel":
+                $valorGasolina = 2.99;
+                break;
+        }
+
         $distancia = $_GET['distancia'];
         $autonomia = $_GET['autonomia'];
-        $valorGasolina = 4.99;
-        $consumoGasolina = ($distancia/$autonomia) * $valorGasolina;
+
+        
+        $consumoGasolina = ($distancia / $autonomia) * $valorGasolina;
+
         return $consumoGasolina;
+
     }
 }

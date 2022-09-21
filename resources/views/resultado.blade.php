@@ -11,14 +11,14 @@
     <div class="painel">
         <h2>Resultado do Cálculo de Consumo</h2>
         <div class="conteudo-painel">
-            <div class="sucesso">
+            <div class='sucesso'>
                 <h3>O valor total do gasto será de:</h3>
                 <ul>
-                    <li><b>Gasolina: </b>R$ {{$valor}}</li>
+                    <li><b>Gasolina:</b>R$ {{$valor}}</li>
                 </ul>
             </div>
         </div>
-        <a class="botao" href="{{url('/')}}" title="Voltar">Voltar</a>
+        <a class="botao" href="{{url('/')}}" title="voltar">Voltar</a>
     </div>
 </body>
 </html>

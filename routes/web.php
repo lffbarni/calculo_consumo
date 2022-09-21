@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +21,6 @@ Route::get('/', function () {
 
 use App\Http\Controllers\CombustivelController;
 
-route::get('/', 'CombustivelController@index');
+Route::get('/', [CombustivelController::class, 'index']);
 
-route::get('/gasto', 'CombustivelController@gasto');
+Route::get('/gasto', [CombustivelController::class, 'gasto']);

@@ -8,11 +8,11 @@ use App\Models\CalculoDeCombustivel;
 
 class CombustivelController extends Controller
 {
-    public function index(){
+    public function index() {
         return view('consumo');
     }
 
-    public function gasto(){
+    public function gasto() {
         $CalculoDeCombustivel = new CalculoDeCombustivel();
 
         $valor = $CalculoDeCombustivel->calcular();
